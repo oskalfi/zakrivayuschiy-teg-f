@@ -4,3 +4,57 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark {
+	--regular: 465;
+	--bold: 785;
+	--background: #000;
+	--font: #00CC14;
+	--background-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
+}
+
+.theme-dark .button__text {
+	color: var(--font);
+}
+
+.theme-dark .footer__save-button__svg {
+	color: var(--font);
+}
+
+@media (prefers-color-scheme:dark) {
+	:root {
+		--regular: 465;
+		--bold: 785;
+		--background: #000;
+		--font: #00CC14;
+		--background-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
+	}
+
+	:root .button__text {
+		color: var(--font);
+	}
+
+	:root .footer__save-button__svg {
+		color: var(--font);
+	}
+}
+
+:root.theme-light {
+	--regular: 400;
+	--bold: 700;
+	--background: #fff;
+	--font: #000;
+	--background-gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+}
+
+.theme-light .button__text {
+	color: var(--background);
+}
+
+.theme-light .footer__save-button__svg {
+	color: var(--background);
+}
+
+@media (prefers-color-scheme:light) {
+	
+}

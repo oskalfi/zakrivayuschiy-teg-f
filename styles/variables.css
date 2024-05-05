@@ -1,1 +1,46 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+	--PressStart2P: 'PressStart2P';
+	--Inter-Variable: 'Inter-Variable';
+	--regular: 400;
+	--bold: 700;
+	--background: #fff;
+	--font: #000;
+	--background-gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+	--heart-main-body: red; 
+}
+
+@keyframes core-filling{
+	to {
+		fill: var(--heart-main-body);
+	}
+}
+
+@keyframes main-body-filling {
+	to {
+		fill: var(--heart-main-body);
+	}
+}
+
+@keyframes contour-filling {
+	to {
+		fill: var(--heart-main-body);
+	}
+}
+
+@keyframes heart-scaling {
+	to {
+		scale: 1.5;
+	}
+}
+
+@keyframes sparks-filling {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
