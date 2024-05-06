@@ -9,36 +9,33 @@
 	--regular: 465;
 	--bold: 785;
 	--background: #000;
-	--font: #00CC14;
+	--font: #00cc14;
 	--background-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
 }
 
-/* эти стили переопределяют базовые стили светлой темы. */
-/* изначально для .button__text значение цвета var(--background) */
-
-.theme-dark .button__text {
-	color: var(--font);
-}
-
-.theme-dark .save-button__svg {
-	color: var(--font);
-}
-
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
 	:root {
-		--regular: 465;
-		--bold: 785;
-		--background: #000;
-		--font: #00CC14;
-		--background-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
+			--regular: 465;
+			--bold: 785;
+			--background: #000;
+			--font: #00cc14;
+			--background-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
 	}
 
 	:root .button__text {
-		color: var(--font);
+			color: var(--font);
 	}
 
 	:root .save-button__svg {
-		color: var(--font);
+			color: var(--font);
+	}
+
+	.theme-light .button__text {
+			color: var(--background);
+	}
+
+	.theme-light .save-button__svg {
+			color: var(--background);
 	}
 }
 
@@ -50,13 +47,12 @@
 	--background-gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }
 
-/* при удалении данных стилей, в светлой теме
-	(именно когда выбрано «СВЕТЛО», а не «АВТО»)
-	текст на кнопках не виден */
-.theme-light .button__text {
-	color: var(--background);
-}
+@media (prefers-color-scheme: light) {
+	.theme-dark .button__text {
+			color: var(--font);
+	}
 
-.theme-light .save-button__svg {
-	color: var(--background);
+	.theme-dark .save-button__svg {
+			color: var(--font);
+	}
 }
